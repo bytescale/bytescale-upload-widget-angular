@@ -46,6 +46,28 @@ To create a file upload button:
 npm install angular-uploader
 ```
 
+**app.module.ts**
+
+```typescript
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { UploaderModule } from "angular-uploader";
+
+import { AppComponent } from "./app.component";
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule, 
+    UploaderModule // <-- Add the Uploader module here.
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
+
+**app.component.ts**
+
 ```typescript
 import { Component } from "@angular/core";
 import { Uploader, UploaderOptions, UploaderResult } from "uploader";
@@ -63,7 +85,7 @@ import { Uploader, UploaderOptions, UploaderResult } from "uploader";
 })
 export class AppComponent {
   uploader = new Uploader({ 
-    apiKey: "free" 
+    apiKey: "free" // <-- Get production-ready API keys from Upload.io
   });
   uploadOptions: UploaderOptions = {
     multi: false
