@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
-import { UploadButtonComponent } from './upload-button.component';
+import { UploadDropzoneComponent } from './upload-dropzone.component';
+import { UploadButtonDirective } from './upload-button.directive';
 
 @NgModule({
   declarations: [
-    UploadButtonComponent
+    UploadDropzoneComponent,
+    UploadButtonDirective
   ],
   imports: [
   ],
   exports: [
-    UploadButtonComponent
+    UploadDropzoneComponent,
+    UploadButtonDirective
   ]
 })
 export class UploaderModule { }
