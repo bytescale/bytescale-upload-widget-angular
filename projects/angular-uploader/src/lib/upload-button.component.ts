@@ -7,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
       angular-uploader works!
     </p>
   `,
-  styles: [
-  ]
+  styles: []
 })
-export class AngularUploaderComponent implements OnInit {
+export class UploadButtonComponent implements OnInit {
 
   constructor() { }
 

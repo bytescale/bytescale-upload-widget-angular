@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
-import { AngularUploaderComponent } from './angular-uploader.component';
+import { UploadButtonComponent } from './upload-button.component';
 
 
 
 @NgModule({
   declarations: [
-    AngularUploaderComponent
+    UploadButtonComponent
   ],
   imports: [
   ],
   exports: [
-    AngularUploaderComponent
+    UploadButtonComponent
   ]
 })
 export class AngularUploaderModule { }

@@ -3,5 +3,5 @@
  */
 
 export * from './lib/angular-uploader.service';
-export * from './lib/angular-uploader.component';
+export * from './lib/upload-button.component';
 export * from './lib/angular-uploader.module';
