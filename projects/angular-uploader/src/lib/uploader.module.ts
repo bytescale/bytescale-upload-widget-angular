@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { UploadButtonComponent } from './upload-button.component';
 
-
-
 @NgModule({
   declarations: [
     UploadButtonComponent
@@ -13,4 +11,4 @@ import { UploadButtonComponent } from './upload-button.component';
     UploadButtonComponent
   ]
 })
-export class AngularUploaderModule { }
+export class UploaderModule { }

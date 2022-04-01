@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AngularUploaderService } from './angular-uploader.service';
+import { UploaderService } from './uploader.service';
 
 describe('AngularUploaderService', () => {
-  let service: AngularUploaderService;
+  let service: UploaderService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AngularUploaderService);
+    service = TestBed.inject(UploaderService);
   });
 
   it('should be created', () => {
