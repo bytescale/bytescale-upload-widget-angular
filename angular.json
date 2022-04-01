@@ -53,13 +53,8 @@
             "main": "projects/sandbox/src/main.ts",
             "polyfills": "projects/sandbox/src/polyfills.ts",
             "tsConfig": "projects/sandbox/tsconfig.app.json",
-            "assets": [
-              "projects/sandbox/src/favicon.ico",
-              "projects/sandbox/src/assets"
-            ],
-            "styles": [
-              "projects/sandbox/src/styles.css"
-            ],
+            "assets": ["projects/sandbox/src/favicon.ico", "projects/sandbox/src/assets"],
+            "styles": ["projects/sandbox/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -120,13 +115,8 @@
             "polyfills": "projects/sandbox/src/polyfills.ts",
             "tsConfig": "projects/sandbox/tsconfig.spec.json",
             "karmaConfig": "projects/sandbox/karma.conf.js",
-            "assets": [
-              "projects/sandbox/src/favicon.ico",
-              "projects/sandbox/src/assets"
-            ],
-            "styles": [
-              "projects/sandbox/src/styles.css"
-            ],
+            "assets": ["projects/sandbox/src/favicon.ico", "projects/sandbox/src/assets"],
+            "styles": ["projects/sandbox/src/styles.css"],
             "scripts": []
           }
         }

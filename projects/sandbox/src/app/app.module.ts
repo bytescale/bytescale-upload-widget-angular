@@ -1,18 +1,13 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { UploaderModule } from 'angular-uploader';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { UploaderModule } from "angular-uploader";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    UploaderModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, UploaderModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
