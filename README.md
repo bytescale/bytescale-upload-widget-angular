@@ -110,20 +110,7 @@ Or via YARN:
 yarn add angular-uploader
 ```
 
-## Initialize
-
-Initialize once at the start of your application:
-
-```javascript
-import { Uploader } from "uploader";
-
-// Get production API keys from Upload.io
-const uploader = new Uploader({
-  apiKey: "free"
-});
-```
-
-## Choose a Component
+## Components & Directives
 
 `angular-uploader` provides two options for adding a file uploader to your app:
 
