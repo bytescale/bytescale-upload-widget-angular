@@ -38,9 +38,11 @@
 
 </p>
 
-# Quick Start — [Try Live Demo](https://codesandbox.io/s/angular-uploader-urtrmz?file=/src/app/app.component.ts)
+<h1 align="center">
+  Quick Start — <a href="https://codesandbox.io/s/angular-uploader-urtrmz?file=/src/app/app.component.ts">Try Live Demo</a>
+</h1>
 
-To create a file upload button:
+<p align="center">To create a file upload button:</p>
 
 ```shell
 npm install angular-uploader
@@ -114,7 +116,7 @@ yarn add angular-uploader
 
 `angular-uploader` provides two options for adding a file uploader to your app:
 
-### (1) `uploadButton` directive
+### Option 1 — `uploadButton` directive
 
 The `uploadButton` directive causes the element to display a file upload modal on click.
 
@@ -152,7 +154,7 @@ export class AppComponent {
 }
 ```
 
-### (2) Dropzone
+### Option 2 — Dropzone
 
 The `upload-dropzone` component renders an inline drag-and-drop file uploader.
 
