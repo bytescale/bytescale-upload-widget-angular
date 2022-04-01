@@ -38,7 +38,7 @@
 
 </p>
 
-# Quick Start
+# Quick Start — [Try Live Demo](https://codesandbox.io/s/angular-uploader-urtrmz?file=/src/app/app.component.ts)
 
 To create a file upload button:
 
