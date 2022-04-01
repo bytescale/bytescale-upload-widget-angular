@@ -1,6 +1,47 @@
 {
   "name": "angular-uploader",
-  "version": "0.0.1",
+  "version": "6.0.1",
+  "author": "Upload <hello@upload.io> (https://upload.io)",
+  "description": "Angular Uploader | Angular File Upload Component | Powered by Upload.io 🚀",
+  "license": "MIT",
+  "main": "dist/main.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://upload.io/uploader",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upload-io/angular-uploader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/upload-io/angular-uploader/issues"
+  },
+  "files": [
+    "*"
+  ],
+  "keywords": [
+    "angular",
+    "angular-component",
+    "uploader",
+    "file uploader",
+    "image uploader",
+    "html5 uploader",
+    "upload widget",
+    "upload",
+    "files",
+    "file management",
+    "file input",
+    "multi image",
+    "multi file",
+    "multipart",
+    "images",
+    "image processing",
+    "filepicker"
+  ],
+  "scripts": {
+    "publish:executeIfReleaseCommit": "bash -c 'COMMIT=$(git log -1 --pretty=%B) && [ \"${COMMIT:0:8}\" != \"Release \" ] || npm run publish:execute'",
+    "publish:execute": "(cd ../.. && ng build angular-uploader && cd dist/angular-uploader && cp ../README.md README.md && npm publish) && npm run publish:createGitHubRelease",
+    "publish:createGitHubRelease": "gh release create v$(node -p \"require('./package.json').version\")"
+  },
   "peerDependencies": {
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0"
