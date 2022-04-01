@@ -116,7 +116,7 @@ yarn add angular-uploader
 
 `angular-uploader` provides two options for adding a file uploader to your app:
 
-### Option 1 — `uploadButton` directive
+### Option 1: `uploadButton` directive
 
 The `uploadButton` directive causes the element to display a file upload modal on click.
 
@@ -154,7 +154,7 @@ export class AppComponent {
 }
 ```
 
-### Option 2 — Dropzone
+### Option 2: `upload-dropzone` component
 
 The `upload-dropzone` component renders an inline drag-and-drop file uploader.
 
