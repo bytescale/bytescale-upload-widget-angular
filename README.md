@@ -46,24 +46,32 @@ To create a file upload button:
 npm install angular-uploader
 ```
 
-```javascript
-import { Uploader } from "uploader";
-import { UploadButton } from "angular-uploader";
+```typescript
+import { Component } from "@angular/core";
+import { Uploader, UploaderOptions, UploaderResult } from "uploader";
 
-const uploader = new Uploader({
-  // Get production API keys from Upload.io
-  apiKey: "free"
-});
-
-<UploadButton uploader={uploader}
-              options={{multi: true}}
-              onComplete={files => console.log(files)}>
-  {({onClick}) =>
-    <button onClick={onClick}>
+@Component({
+  selector: "app-root",
+  template: `
+    <button uploadButton 
+            [uploadComplete]="uploadComplete" 
+            [uploadOptions]="uploadOptions" 
+            [uploader]="uploader">
       Upload a file...
     </button>
-  }
-</UploadButton>
+  `
+})
+export class AppComponent {
+  uploader = new Uploader({ 
+    apiKey: "free" 
+  });
+  uploadOptions: UploaderOptions = {
+    multi: false
+  };
+  uploadComplete = (files: UploaderResult[]) => {
+    console.log(files.map(x => x.fileUrl));
+  };
+}
 ```
 
 # Installation
@@ -78,12 +86,6 @@ Or via YARN:
 
 ```shell
 yarn add angular-uploader
-```
-
-Or via a `<script>` tag:
-
-```html
-<script src="https://js.upload.io/angular-uploader/v1"></script>
 ```
 
 ## Initialize
@@ -101,39 +103,98 @@ const uploader = new Uploader({
 
 ## Choose a Component
 
-`angular-uploader` provides two UI components:
+`angular-uploader` provides two options for adding a file uploader to your app:
 
-### (1) File Upload Button
+### (1) `uploadButton` directive
 
-```javascript
-import { UploadButton } from "angular-uploader";
+The `uploadButton` directive causes the element to display a file upload modal on click.
 
-<UploadButton uploader={uploader}
-              options={{multi: true}}
-              onComplete={files => console.log(files)}>
-  {({onClick}) =>
-    <button onClick={onClick}>
+Inputs:
+
+- `uploader` (required): an instance of the [`Uploader` class](https://github.com/upload-io/uploader/blob/main/lib/src/Uploader.tsx).
+- `uploadOptions` (optional): an object following the [`UploaderOptions` interface](https://github.com/upload-io/uploader/blob/main/lib/src/UploaderOptions.ts).
+- `uploadComplete` (optional): a callback containing a single parameter — an array of uploaded files.
+
+```typescript
+import { Component } from "@angular/core";
+import { Uploader, UploaderOptions, UploaderResult } from "uploader";
+
+@Component({
+  selector: "app-root",
+  template: `
+    <button uploadButton 
+            [uploader]="uploader"
+            [uploadOptions]="uploadOptions"
+            [uploadComplete]="uploadComplete">
       Upload a file...
     </button>
-  }
-</UploadButton>
+  `
+})
+export class AppComponent {
+  uploader = new Uploader({ 
+    apiKey: "free" 
+  });
+  uploadOptions: UploaderOptions = {
+    multi: false
+  };
+  uploadComplete = (files: UploaderResult[]) => {
+    console.log(files.map(x => x.fileUrl));
+  };
+}
 ```
 
 ### (2) Dropzone
 
-```javascript
-import { UploadDropzone } from "angular-uploader";
+The `upload-dropzone` component renders an inline drag-and-drop file uploader.
 
-<UploadDropzone uploader={uploader}
-                options={{multi: true}}
-                onComplete={files => console.log(files)}
-                width="600px"
-                height="375px" />
+Inputs:
+
+- `uploader` (required): an instance of the [`Uploader` class](https://github.com/upload-io/uploader/blob/main/lib/src/Uploader.tsx).
+- `uploadOptions` (optional): an object following the [`UploaderOptions` interface](https://github.com/upload-io/uploader/blob/main/lib/src/UploaderOptions.ts).
+- `uploadComplete` (optional): a callback containing a single parameter — an array of uploaded files.
+- `width` (optional): width of the dropzone.
+- `height` (optional): height of the dropzone.
+
+```typescript
+import { Component } from "@angular/core";
+import { Uploader, UploaderOptions, UploaderResult } from "uploader";
+
+@Component({
+  selector: "app-root",
+  template: `
+    <upload-dropzone [uploader]="uploader" 
+                     [uploadOptions]="uploadOptions"
+                     [width]="width"
+                     [height]="height"> 
+    </upload-dropzone>
+  `
+})
+export class AppComponent {
+  uploader = new Uploader({ 
+    apiKey: "free" 
+  });
+  uploadOptions: UploaderOptions = {
+    multi: false,
+
+    // 'onUpdate' explained:
+    // - Dropzones are non-terminal by default (i.e. they don't have an
+    //   end state), so we use the 'onUpdate' option instead of the
+    //   'uploadComplete' component attribute to receive files. 
+    // - To create a terminal dropzone, add a 'uploadComplete' attribute
+    //   to the component and add the following option here:
+    // showFinishButton: true
+    onUpdate: (files: UploaderResult[]) => {
+      console.log(files.map(x => x.fileUrl));
+    }
+  };
+  width = "600px"
+  height = "375px"
+}
 ```
 
 ## The Result
 
-The `onComplete` callback returns a `Array<UploaderResult>`:
+The callbacks receive a `Array<UploaderResult>`:
 
 ```javascript
 {
@@ -163,7 +224,7 @@ The `onComplete` callback returns a `Array<UploaderResult>`:
 
 ## Full Documentation
 
-`angular-uploader` is a wrapper for `uploader`.
+`angular-uploader` is an Angular wrapper for `uploader`.
 
 Please see: **[Uploader Docs](https://github.com/upload-io/uploader#%EF%B8%8F-configuration)**.
 

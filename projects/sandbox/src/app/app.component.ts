@@ -10,8 +10,7 @@ import { Uploader, UploaderOptions, UploaderResult } from "uploader";
       </button>
       <upload-dropzone [uploadOptions]="uploadOptionsForDropzone" [uploader]="uploader"> </upload-dropzone>
     </div>
-  `,
-  styles: []
+  `
 })
 export class AppComponent {
   uploader = new Uploader({ apiKey: "free" });
