@@ -9,18 +9,22 @@ import { Uploader, UploaderOptions, UploaderResult } from "uploader";
   styles: []
 })
 export class UploadDropzoneComponent implements AfterViewInit {
-  @Input("uploadOptions") options?: UploaderOptions;
+  @Input("options") options?: UploaderOptions;
   @Input("uploader") uploader?: Uploader;
-  @Input("uploadComplete") onComplete?: (files: UploaderResult[]) => void;
+  @Input("onComplete") onComplete?: (files: UploaderResult[]) => void;
+  @Input("onUpdate") onUpdate?: (files: UploaderResult[]) => void;
   @Input("width") width: string = "600px";
   @Input("height") height?: string = "375px";
 
   @ViewChild("container") container!: ElementRef;
 
   ngAfterViewInit() {
+    const onUpdateParams: UploaderOptions = this.onUpdate === undefined ? {} : { onUpdate: this.onUpdate };
+
     this.getUploader()
       .open({
         ...(this.options !== undefined ? this.options : {}),
+        ...onUpdateParams,
         container: this.container.nativeElement,
         layout: "inline"
       })

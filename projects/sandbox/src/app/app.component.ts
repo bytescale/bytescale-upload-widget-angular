@@ -5,10 +5,10 @@ import { Uploader, UploaderOptions, UploaderResult } from "uploader";
   selector: "app-root",
   template: `
     <div>
-      <button uploadButton [uploadComplete]="uploadComplete" [uploadOptions]="uploadOptions" [uploader]="uploader">
+      <button uploadButton [uploader]="uploader" [uploadComplete]="uploadComplete" [uploadOptions]="uploadOptions">
         Upload...
       </button>
-      <upload-dropzone [uploadOptions]="uploadOptionsForDropzone" [uploader]="uploader"> </upload-dropzone>
+      <upload-dropzone [uploader]="uploader" [onUpdate]="uploadComplete" [options]="uploadOptions"> </upload-dropzone>
     </div>
   `
 })
@@ -19,9 +19,5 @@ export class AppComponent {
   };
   uploadOptions: UploaderOptions = {
     multi: false
-  };
-  uploadOptionsForDropzone: UploaderOptions = {
-    ...this.uploadOptions,
-    onUpdate: this.uploadComplete // 'uploadComplete' doesn't fire by default for dropzones, as they're non-terminal.
   };
 }
