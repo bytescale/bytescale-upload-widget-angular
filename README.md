@@ -189,16 +189,16 @@ export class AppComponent {
   options: UploaderOptions = {
     multi: false
   };
-  width = "600px";
-  height = "375px";
   // 'onUpdate' explained:
   // - Dropzones are non-terminal by default (i.e. they don't have an
-  //   end state), so we use 'onUpdate' instead of 'uploadComplete'. 
+  //   end state), so we use 'onUpdate' instead of 'onComplete'. 
   // - To create a terminal dropzone, add a 'onComplete' attribute
   //   to the component and add the 'showFinishButton: true' option.
   onUpdate = (files: UploaderResult[]) => {
     console.log(files.map(x => x.fileUrl));
   };
+  width = "600px";
+  height = "375px";
 }
 ```
 
