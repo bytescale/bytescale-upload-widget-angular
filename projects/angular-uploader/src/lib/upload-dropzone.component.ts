@@ -14,7 +14,7 @@ export class UploadDropzoneComponent implements AfterViewInit {
   @Input("onComplete") onComplete?: (files: UploaderResult[]) => void;
   @Input("onUpdate") onUpdate?: (files: UploaderResult[]) => void;
   @Input("width") width: string = "600px";
-  @Input("height") height?: string = "375px";
+  @Input("height") height: string = "375px";
 
   @ViewChild("container") container!: ElementRef;
 
