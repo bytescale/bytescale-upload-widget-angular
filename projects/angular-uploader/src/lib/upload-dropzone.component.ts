@@ -40,7 +40,14 @@ export class UploadDropzoneComponent implements AfterViewInit {
 
   private getUploader(): Uploader {
     if (this.uploader === undefined) {
-      throw new Error("[angular-uploader] You must provide the 'uploader' attribute to 'upload-dropzone' components.");
+      throw new Error(
+        "[angular-uploader] You must provide the 'uploader' attribute to the 'UploadDropzone' component."
+      );
+    }
+    if (!(this.uploader instanceof Uploader)) {
+      throw new Error(
+        "[angular-uploader] Attribute 'uploader' on component 'UploadDropzone' must be of type 'Uploader', which is exported by the package 'uploader'."
+      );
     }
 
     return this.uploader;

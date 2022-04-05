@@ -38,6 +38,11 @@ export class UploadButtonDirective implements OnInit {
         "[angular-uploader] You must provide the 'uploader' attribute to elements marked with the 'uploadButton' directive."
       );
     }
+    if (!(this.uploader instanceof Uploader)) {
+      throw new Error(
+        "[angular-uploader] Attribute 'uploader' on elements marked with the directive 'uploadButton' must be of type 'Uploader', which is exported by the package 'uploader'."
+      );
+    }
 
     return this.uploader;
   }
