@@ -112,13 +112,35 @@ Or via YARN:
 yarn add angular-uploader
 ```
 
+## Initialization
+
+Add the `UploaderModule` to your app:
+
+```typescript
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { UploaderModule } from "angular-uploader";
+
+import { AppComponent } from "./app.component";
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule, 
+    UploaderModule // <-- Add the Uploader module here.
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
+
 ## Components & Directives
 
-`angular-uploader` provides two options for adding a file uploader to your app:
+Choose one of these options:
 
-### Option 1: `uploadButton` directive
+### Option 1: Use the `uploadButton` directive
 
-The `uploadButton` directive causes the element to display a file upload modal on click.
+The `uploadButton` directive displays a file upload modal on click.
 
 Inputs:
 
@@ -154,7 +176,7 @@ export class AppComponent {
 }
 ```
 
-### Option 2: `upload-dropzone` component
+### Option 2: Use the `upload-dropzone` component
 
 The `upload-dropzone` component renders an inline drag-and-drop file uploader.
 
