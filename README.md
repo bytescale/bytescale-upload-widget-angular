@@ -4,7 +4,7 @@
   </a>
 </h1>
 
-<p align="center"><b>Angular File Upload Component for <a href="https://upload.io/">Upload.io</a></b><br/> (Angular Wrapper for <a href="https://upload.io/uploader">Uploader</a>)</p>
+<p align="center"><b>Angular File Upload Component</b><br/> (Angular Wrapper for <a href="https://upload.io/uploader">Uploader</a>)</p>
 <br/>
 <p align="center">
   <a href="https://github.com/upload-io/angular-uploader/">

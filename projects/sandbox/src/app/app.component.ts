@@ -5,10 +5,17 @@ import { Uploader, UploaderOptions, UploaderResult } from "uploader";
   selector: "app-root",
   template: `
     <div>
-      <button uploadButton [uploader]="uploader" [uploadComplete]="uploadComplete" [uploadOptions]="uploadOptions">
+      <button
+        id="uploadButton"
+        uploadButton
+        [uploader]="uploader"
+        [uploadComplete]="uploadComplete"
+        [uploadOptions]="uploadOptions"
+      >
         Upload...
       </button>
-      <upload-dropzone [uploader]="uploader" [onUpdate]="uploadComplete" [options]="uploadOptions"> </upload-dropzone>
+      <upload-dropzone id="dropzone" [uploader]="uploader" [onUpdate]="uploadComplete" [options]="uploadOptions">
+      </upload-dropzone>
     </div>
   `
 })

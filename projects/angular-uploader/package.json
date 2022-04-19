@@ -43,7 +43,7 @@
   ],
   "scripts": {
     "publish:executeIfReleaseCommit": "bash -c 'COMMIT=$(git log -1 --pretty=%B) && [ \"${COMMIT:0:8}\" != \"Release \" ] || npm run publish:execute'",
-    "publish:execute": "(cd ../.. && ./node_modules/.bin/ng build angular-uploader && cd dist/angular-uploader && cp ../../README.md README.md && npm publish) && npm run publish:createGitHubRelease",
+    "publish:execute": "(cd ../.. && ./node_modules/.bin/ng build angular-uploader && cd dist/angular-uploader && cp ../../README.md README.md && cp -r ../../tests tests && npm publish) && npm run publish:createGitHubRelease",
     "publish:createGitHubRelease": "gh release create v$(node -p \"require('./package.json').version\")"
   },
   "peerDependencies": {
