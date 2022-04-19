@@ -41,7 +41,9 @@
     "multipart",
     "ajax",
     "xhr",
-    "angularjs"
+    "angularjs",
+    "ng",
+    "ngx"
   ],
   "scripts": {
     "publish:executeIfReleaseCommit": "bash -c 'COMMIT=$(git log -1 --pretty=%B) && [ \"${COMMIT:0:8}\" != \"Release \" ] || npm run publish:execute'",
