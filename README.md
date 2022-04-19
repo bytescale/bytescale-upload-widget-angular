@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://upload.io/uploader">
-    <img alt="Angular Uploader" width="264" height="106" src="https://raw.githubusercontent.com/upload-io/angular-uploader/main/.github/assets/logo.svg">
+    <img alt="Angular Uploader" width="264" height="100" src="https://raw.githubusercontent.com/upload-io/angular-uploader/main/.github/assets/logo.svg">
   </a>
 </h1>
 
