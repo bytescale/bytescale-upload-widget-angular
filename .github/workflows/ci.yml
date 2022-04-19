@@ -37,7 +37,9 @@ jobs:
 
       # Note: we put other steps between the 'npm start' and the test runs, just to make time for the server to spin-up.
       - name: "Tests"
-        run: npm test
+        run: |
+          sleep 10
+          npm test
 
       - name: "Publish"
         if: github.ref == 'refs/heads/main'
