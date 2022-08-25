@@ -57,6 +57,6 @@
   },
   "dependencies": {
     "tslib": "^2.3.0",
-    "uploader": "^1.37.3"
+    "uploader": "^1.48.0"
   }
 }
