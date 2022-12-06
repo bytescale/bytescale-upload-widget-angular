@@ -8,8 +8,8 @@ This repository contains a hot-reloading sandbox for developing the `angular-upl
 
 | Package | Version  |
 | ------- | -------- |
-| Node    | v12.22.0 |
-| NPM     | v6.14.11 |
+| Node    | v18.12.1 |
+| NPM     | v8.19.2  |
 | ng      | v13.3.1  |
 
 ## Repository Structure
@@ -32,7 +32,6 @@ cd angular-uploader
 
 ```shell
 npm install
-(cd projects/angular-uploader && npm install)
 ```
 
 ### 3. Run The Sandbox

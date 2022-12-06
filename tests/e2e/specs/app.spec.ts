@@ -3,11 +3,16 @@ import App from "../pageobjects/app.page";
 describe("angular-uploader sandbox", () => {
   it("should contain a dropzone component", async () => {
     await App.open();
-    await expect(App.dropzoneUploadButton).toHaveText("Upload a File");
+    const button = App.dropzoneUploadButton;
+    const buttonText = await button.getText();
+    expect(buttonText).toBe("Upload a File");
   });
   it("should contain a file upload button", async () => {
     await App.open();
     await App.modalLauncher.click();
-    await expect(App.modalButton).toHaveText("Upload a File");
+    const button = App.modalButton;
+    await button.waitForClickable();
+    const buttonText = await button.getText();
+    expect(buttonText).toBe("Upload a File");
   });
 });

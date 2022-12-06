@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from "@angular/core";
-import { Uploader, UploaderOptions, UploaderResult } from "uploader";
+import { UploaderInterface, UploaderOptions, UploaderResult } from "uploader";
 
 @Component({
   selector: "upload-dropzone",
@@ -10,7 +10,7 @@ import { Uploader, UploaderOptions, UploaderResult } from "uploader";
 })
 export class UploadDropzoneComponent implements AfterViewInit {
   @Input("options") options?: UploaderOptions;
-  @Input("uploader") uploader?: Uploader;
+  @Input("uploader") uploader?: UploaderInterface;
   @Input("onComplete") onComplete?: (files: UploaderResult[]) => void;
   @Input("onUpdate") onUpdate?: (files: UploaderResult[]) => void;
   @Input("width") width: string = "600px";
@@ -38,15 +38,10 @@ export class UploadDropzoneComponent implements AfterViewInit {
       );
   }
 
-  private getUploader(): Uploader {
+  private getUploader(): UploaderInterface {
     if (this.uploader === undefined) {
       throw new Error(
         "[angular-uploader] You must provide the 'uploader' attribute to the 'UploadDropzone' component."
-      );
-    }
-    if (!(this.uploader instanceof Uploader)) {
-      throw new Error(
-        "[angular-uploader] Attribute 'uploader' on component 'UploadDropzone' must be of type 'Uploader', which is exported by the package 'uploader'."
       );
     }
 

@@ -20,7 +20,7 @@ import { Uploader, UploaderOptions, UploaderResult } from "uploader";
   `
 })
 export class AppComponent {
-  uploader = new Uploader({ apiKey: "free" });
+  uploader = Uploader({ apiKey: "free" });
   uploadComplete = (files: UploaderResult[]) => {
     console.log(files.map(x => x.fileUrl));
   };

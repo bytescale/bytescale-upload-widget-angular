@@ -16,7 +16,7 @@ describe("UploadDropzoneComponent", () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(UploadDropzoneComponent);
     component = fixture.componentInstance;
-    component.uploader = new Uploader({ apiKey: "free" });
+    component.uploader = Uploader({ apiKey: "free" });
     fixture.detectChanges();
   });
 
