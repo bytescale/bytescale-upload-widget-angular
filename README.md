@@ -38,8 +38,8 @@
 </p>
 <h1 align="center">
   Get Started —
-  <a href="https://codepen.io/upload-js/pen/popWJpX?editors=0010">
-    Try on CodePen
+  <a href="https://stackblitz.com/edit/angular-upload-widget">
+    Try on StackBlitz
   </a>
 </h1>
 
