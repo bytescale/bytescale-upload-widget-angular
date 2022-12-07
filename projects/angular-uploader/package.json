@@ -1,11 +1,9 @@
 {
   "name": "angular-uploader",
-  "version": "8.0.0",
+  "version": "8.1.0",
   "author": "Upload <hello@upload.io> (https://upload.io)",
   "description": "Angular File Upload UI Widget — Lightweight & supports: drag and drop, multiple uploads, image cropping, customization & more 🚀 Comes with Cloud Storage 🌐",
   "license": "MIT",
-  "main": "dist/main.js",
-  "types": "dist/index.d.ts",
   "homepage": "https://upload.io/uploader",
   "readmeFilename": "README.md",
   "repository": {
@@ -18,6 +16,23 @@
   "files": [
     "*"
   ],
+  "fesm2020": "./fesm2020/angular-uploader.mjs",
+  "fesm2015": "./fesm2015/angular-uploader.mjs",
+  "esm2020": "./esm2020/angular-uploader.mjs",
+  "typings": "./angular-uploader.d.ts",
+  "module": "./fesm2015/angular-uploader.mjs",
+  "es2020": "./fesm2020/angular-uploader.mjs",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./angular-uploader.d.ts",
+      "esm2020": "./esm2020/angular-uploader.mjs",
+      "es2020": "./fesm2020/angular-uploader.mjs",
+      "es2015": "./fesm2015/angular-uploader.mjs",
+      "node": "./fesm2015/angular-uploader.mjs",
+      "default": "./fesm2020/angular-uploader.mjs"
+    }
+  },
   "keywords": [
     "angular",
     "angular-image-picker",
@@ -53,8 +68,9 @@
   },
   "peerDependencies": {
     "@angular/common": "^13.3.0",
-    "@angular/core": "^13.3.0",
-    "uploader": "^3.0.1"
+    "@angular/core": "^13.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "uploader": "^3.0.1"
+  }
 }
