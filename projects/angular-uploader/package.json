@@ -16,23 +16,6 @@
   "files": [
     "*"
   ],
-  "fesm2020": "./fesm2020/angular-uploader.mjs",
-  "fesm2015": "./fesm2015/angular-uploader.mjs",
-  "esm2020": "./esm2020/angular-uploader.mjs",
-  "typings": "./angular-uploader.d.ts",
-  "module": "./fesm2015/angular-uploader.mjs",
-  "es2020": "./fesm2020/angular-uploader.mjs",
-  "type": "module",
-  "exports": {
-    ".": {
-      "types": "./angular-uploader.d.ts",
-      "esm2020": "./esm2020/angular-uploader.mjs",
-      "es2020": "./fesm2020/angular-uploader.mjs",
-      "es2015": "./fesm2015/angular-uploader.mjs",
-      "node": "./fesm2015/angular-uploader.mjs",
-      "default": "./fesm2020/angular-uploader.mjs"
-    }
-  },
   "keywords": [
     "angular",
     "angular-image-picker",
@@ -71,6 +54,7 @@
     "@angular/core": "^13.3.0"
   },
   "dependencies": {
-    "uploader": "^3.0.1"
+    "uploader": "^3.0.1",
+    "tslib": "^2.3.0"
   }
 }
