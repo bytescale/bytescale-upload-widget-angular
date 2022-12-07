@@ -125,7 +125,7 @@ import { Uploader, UploadWidgetConfig, UploadWidgetResult } from "uploader";
   `
 })
 export class AppComponent {
-  uploader = new Uploader({ 
+  uploader = Uploader({ 
     apiKey: "free" 
   });
   options: UploadWidgetConfig = {
@@ -166,7 +166,7 @@ import { Uploader, UploadWidgetConfig, UploadWidgetResult } from "uploader";
   `
 })
 export class AppComponent {
-  uploader = new Uploader({ 
+  uploader = Uploader({ 
     apiKey: "free" 
   });
   options: UploadWidgetConfig = {
