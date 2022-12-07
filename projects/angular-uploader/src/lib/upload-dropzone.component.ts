@@ -6,7 +6,7 @@ import { UploaderInterface, UploadWidgetConfig, UploadWidgetResult } from "uploa
   template: `
     <div
       #container
-      style="position: relative; width: 100%; minWidth: 280px; maxWidth: {{ width }}; height: {{ height }}"
+      style="position: relative; width: 100%; min-width: 280px; maxWidth: {{ width }}; height: {{ height }}"
     ></div>
   `,
   styles: []
