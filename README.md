@@ -176,11 +176,11 @@ export class AppComponent {
   options: UploadWidgetConfig = {
     multi: false
   };
-  // 'onUpdate' explained:
-  // - Dropzones are non-terminal by default (i.e. they don't have an
-  //   end state), so we use 'onUpdate' instead of 'onComplete'. 
-  // - To create a terminal dropzone, add a 'onComplete' attribute
-  //   to the component and add the 'showFinishButton: true' option.
+  // 'onUpdate' vs 'onComplete' attrs on 'upload-dropzone':
+  // - Dropzones are non-terminal by default (they don't have an end
+  //   state), so by default we use 'onUpdate' instead of 'onComplete'.
+  // - To create a terminal dropzone, use the 'onComplete' attribute
+  //   instead and add the 'showFinishButton: true' option.
   onUpdate = (files: UploadWidgetResult[]) => {
     alert(files.map(x => x.fileUrl).join("\n"));
   };
