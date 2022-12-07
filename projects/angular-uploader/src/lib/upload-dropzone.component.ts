@@ -4,7 +4,10 @@ import { UploaderInterface, UploadWidgetConfig, UploadWidgetResult } from "uploa
 @Component({
   selector: "upload-dropzone",
   template: `
-    <div #container style="position: relative; width: 100%; maxWidth: {{ width }}; height: {{ height }}"></div>
+    <div
+      #container
+      style="position: relative; width: 100%; minWidth: 280px; maxWidth: {{ width }}; height: {{ height }}"
+    ></div>
   `,
   styles: []
 })
