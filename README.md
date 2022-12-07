@@ -38,7 +38,7 @@
 </p>
 <h1 align="center">
   Get Started —
-  <a href="https://stackblitz.com/edit/angular-upload-widget">
+  <a href="https://stackblitz.com/edit/angular-upload-widget?file=src%2Fapp%2Fapp.component.ts">
     Try on StackBlitz
   </a>
 </h1>
@@ -99,7 +99,7 @@ export class AppModule {}
 
 Choose one of these options:
 
-### Option 1: Use the `uploadButton` directive
+### Option 1: Create an Upload Button — [Try on StackBlitz](https://stackblitz.com/edit/angular-upload-widget?file=src%2Fapp%2Fapp.component.ts)
 
 The `uploadButton` directive displays a file upload modal on click.
 
@@ -110,34 +110,38 @@ Inputs:
 - `uploadComplete` (optional): a callback containing a single parameter — an array of uploaded files.
 
 ```typescript
-import { Component } from "@angular/core";
-import { Uploader, UploadWidgetConfig, UploadWidgetResult } from "uploader";
+import { Component } from '@angular/core';
+import { Uploader, UploadWidgetConfig, UploadWidgetResult } from 'uploader';
 
 @Component({
-  selector: "app-root",
+  selector: 'app-root',
   template: `
-    <button uploadButton 
-            [uploader]="uploader"
-            [uploadOptions]="options"
-            [uploadComplete]="onComplete">
+    <a href="{{ uploadedFileUrl }}" target="_blank">{{ uploadedFileUrl }}</a>
+    <button
+      uploadButton
+      [uploadComplete]="onComplete"
+      [uploadOptions]="options"
+      [uploader]="uploader"
+    >
       Upload a file...
     </button>
-  `
+  `,
 })
 export class AppComponent {
-  uploader = Uploader({ 
-    apiKey: "free" 
+  uploader = Uploader({
+    apiKey: 'free', // <-- Get production-ready API keys from Upload.io
   });
   options: UploadWidgetConfig = {
-    multi: false
+    multi: false,
   };
   onComplete = (files: UploadWidgetResult[]) => {
-    alert(files.map(x => x.fileUrl).join("\n"));
+    this.uploadedFileUrl = files[0]?.fileUrl;
   };
+  uploadedFileUrl = undefined;
 }
 ```
 
-### Option 2: Use the `upload-dropzone` component
+### Option 2: Create a Dropzone — [Try on StackBlitz](https://stackblitz.com/edit/angular-upload-dropzone?file=src%2Fapp%2Fapp.component.ts)
 
 The `upload-dropzone` component renders an inline drag-and-drop file uploader.
 
