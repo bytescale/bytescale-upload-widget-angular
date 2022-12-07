@@ -77,14 +77,14 @@ export class AppModule {}
 
 ```typescript
 import { Component } from "@angular/core";
-import { Uploader, UploaderOptions, UploaderResult } from "uploader";
+import { Uploader, UploadWidgetConfig, UploadWidgetResult } from "uploader";
 
 @Component({
   selector: "app-root",
   template: `
     <button uploadButton 
-            [uploadComplete]="uploadComplete" 
-            [uploadOptions]="uploadOptions" 
+            [uploadComplete]="onComplete" 
+            [uploadOptions]="options" 
             [uploader]="uploader">
       Upload a file...
     </button>
@@ -94,11 +94,11 @@ export class AppComponent {
   uploader = new Uploader({ 
     apiKey: "free" // <-- Get production-ready API keys from Upload.io
   });
-  uploadOptions: UploaderOptions = {
+  options: UploadWidgetConfig = {
     multi: false
   };
-  uploadComplete = (files: UploaderResult[]) => {
-    console.log(files.map(x => x.fileUrl));
+  onComplete = (files: UploadWidgetResult[]) => {
+    alert(files.map(x => x.fileUrl).join("\n"));
   };
 }
 ```
@@ -150,20 +150,20 @@ The `uploadButton` directive displays a file upload modal on click.
 Inputs:
 
 - `uploader` (required): an instance of the [`Uploader` class](https://github.com/upload-io/uploader/blob/main/lib/src/Uploader.tsx).
-- `uploadOptions` (optional): an object following the [`UploaderOptions` interface](https://github.com/upload-io/uploader/blob/main/lib/src/UploaderOptions.ts).
+- `uploadOptions` (optional): an object following the [`UploadWidgetConfig` interface](https://github.com/upload-io/uploader/blob/main/lib/src/UploadWidgetConfig.ts).
 - `uploadComplete` (optional): a callback containing a single parameter — an array of uploaded files.
 
 ```typescript
 import { Component } from "@angular/core";
-import { Uploader, UploaderOptions, UploaderResult } from "uploader";
+import { Uploader, UploadWidgetConfig, UploadWidgetResult } from "uploader";
 
 @Component({
   selector: "app-root",
   template: `
     <button uploadButton 
             [uploader]="uploader"
-            [uploadOptions]="uploadOptions"
-            [uploadComplete]="uploadComplete">
+            [uploadOptions]="options"
+            [uploadComplete]="onComplete">
       Upload a file...
     </button>
   `
@@ -172,11 +172,11 @@ export class AppComponent {
   uploader = new Uploader({ 
     apiKey: "free" 
   });
-  uploadOptions: UploaderOptions = {
+  options: UploadWidgetConfig = {
     multi: false
   };
-  uploadComplete = (files: UploaderResult[]) => {
-    console.log(files.map(x => x.fileUrl));
+  onComplete = (files: UploadWidgetResult[]) => {
+    alert(files.map(x => x.fileUrl).join("\n"));
   };
 }
 ```
@@ -188,7 +188,7 @@ The `upload-dropzone` component renders an inline drag-and-drop file uploader.
 Inputs:
 
 - `uploader` (required): an instance of the [`Uploader` class](https://github.com/upload-io/uploader/blob/main/lib/src/Uploader.tsx).
-- `options` (optional): an object following the [`UploaderOptions` interface](https://github.com/upload-io/uploader/blob/main/lib/src/UploaderOptions.ts).
+- `options` (optional): an object following the [`UploadWidgetConfig` interface](https://github.com/upload-io/uploader/blob/main/lib/src/UploadWidgetConfig.ts).
 - `onComplete` (optional): a callback containing the array of uploaded files as its parameter.
 - `onUpdate` (optional): same as above, but called after every file upload or removal.
 - `width` (optional): width of the dropzone.
@@ -196,7 +196,7 @@ Inputs:
 
 ```typescript
 import { Component } from "@angular/core";
-import { Uploader, UploaderOptions, UploaderResult } from "uploader";
+import { Uploader, UploadWidgetConfig, UploadWidgetResult } from "uploader";
 
 @Component({
   selector: "app-root",
@@ -213,7 +213,7 @@ export class AppComponent {
   uploader = new Uploader({ 
     apiKey: "free" 
   });
-  options: UploaderOptions = {
+  options: UploadWidgetConfig = {
     multi: false
   };
   // 'onUpdate' explained:
@@ -221,8 +221,8 @@ export class AppComponent {
   //   end state), so we use 'onUpdate' instead of 'onComplete'. 
   // - To create a terminal dropzone, add a 'onComplete' attribute
   //   to the component and add the 'showFinishButton: true' option.
-  onUpdate = (files: UploaderResult[]) => {
-    console.log(files.map(x => x.fileUrl));
+  onUpdate = (files: UploadWidgetResult[]) => {
+    alert(files.map(x => x.fileUrl).join("\n"));
   };
   width = "600px";
   height = "375px";
@@ -231,7 +231,7 @@ export class AppComponent {
 
 ## The Result
 
-The callbacks receive a `Array<UploaderResult>`:
+The callbacks receive a `Array<UploadWidgetResult>`:
 
 ```javascript
 {

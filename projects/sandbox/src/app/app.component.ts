@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Uploader, UploaderOptions, UploaderResult } from "uploader";
+import { Uploader, UploadWidgetConfig, UploadWidgetResult } from "uploader";
 
 @Component({
   selector: "app-root",
@@ -21,10 +21,10 @@ import { Uploader, UploaderOptions, UploaderResult } from "uploader";
 })
 export class AppComponent {
   uploader = Uploader({ apiKey: "free" });
-  uploadComplete = (files: UploaderResult[]) => {
+  uploadComplete = (files: UploadWidgetResult[]) => {
     console.log(files.map(x => x.fileUrl));
   };
-  uploadOptions: UploaderOptions = {
+  uploadOptions: UploadWidgetConfig = {
     multi: false
   };
 }

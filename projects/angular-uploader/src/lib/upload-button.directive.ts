@@ -1,13 +1,13 @@
 import { Directive, HostListener, Input, OnInit } from "@angular/core";
-import { UploaderInterface, UploaderOptions, UploaderResult } from "uploader";
+import { UploaderInterface, UploadWidgetConfig, UploadWidgetResult } from "uploader";
 
 @Directive({
   selector: "[uploadButton]"
 })
 export class UploadButtonDirective implements OnInit {
-  @Input("uploadOptions") options?: UploaderOptions;
+  @Input("uploadOptions") options?: UploadWidgetConfig;
   @Input("uploader") uploader?: UploaderInterface;
-  @Input("uploadComplete") onComplete?: (files: UploaderResult[]) => void;
+  @Input("uploadComplete") onComplete?: (files: UploadWidgetResult[]) => void;
 
   @HostListener("click", ["$event"]) onClick(event: any) {
     event.preventDefault();
