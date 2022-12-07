@@ -64,13 +64,13 @@
 Install via NPM:
 
 ```shell
-npm install angular-uploader
+npm install angular-uploader uploader
 ```
 
 Or via YARN:
 
 ```shell
-yarn add angular-uploader
+yarn add angular-uploader uploader
 ```
 
 ## Initialization
