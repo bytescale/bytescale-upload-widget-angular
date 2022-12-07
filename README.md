@@ -1,20 +1,17 @@
 <h1 align="center">
   <a href="https://upload.io/uploader">
-    <img alt="Angular Uploader" width="264" height="100" src="https://raw.githubusercontent.com/upload-io/angular-uploader/main/.github/assets/logo.svg">
+    <img alt="Angular Uploader" width="264" height="106" src="https://raw.githubusercontent.com/upload-io/angular-uploader/main/.github/assets/logo.svg">
   </a>
 </h1>
-
 <p align="center"><b>Angular File Upload Widget</b><br/> (With Integrated Cloud Storage)</p>
-
-<p align="center">Angular Wrapper for <a href="https://upload.io/uploader">Uploader</a> • Developed by <a href="https://upload.io/">Upload.io</a><br/><br/></p>
-
+<br/>
 <p align="center">
   <a href="https://github.com/upload-io/angular-uploader/">
-    <img src="https://img.shields.io/badge/gzipped-29%20kb-4ba0f6" />
+    <img src="https://img.shields.io/badge/gzipped-6%20kb-4ba0f6" />
   </a>
 
   <a href="https://www.npmjs.com/package/angular-uploader">
-    <img src="https://img.shields.io/badge/angular--uploader-npm-4ba0f6" />
+    <img src="https://img.shields.io/badge/upload--js-npm-4ba0f6" />
   </a>
 
   <a href="https://github.com/upload-io/angular-uploader/actions/workflows/ci.yml">
@@ -39,69 +36,28 @@
   </a>
 
 </p>
-
 <h1 align="center">
-  Quick Start —
-  <a href="https://codesandbox.io/s/angular-uploader-urtrmz?file=/src/app/app.component.ts">Try Live Demo</a>
+  Get Started —
+  <a href="https://codepen.io/upload-js/pen/popWJpX?editors=0010">
+    Try on CodePen
+  </a>
 </h1>
 
 <p align="center"><a href="https://upload.io/uploader"><img alt="Upload Widget Demo" width="100%" src="https://raw.githubusercontent.com/upload-io/angular-uploader/main/.github/assets/demo.webp"></a></p>
 
-<p align="center">To implement the above widget:</p>
+<p align="center">100% Serverless File Upload Widget  <br /> Powered by <a href="https://upload.io/">Upload.io</a><br/><br/></p>
 
-```shell
-npm install angular-uploader
-```
+<hr/>
 
-**app.module.ts**
+<p align="center"><a href="https://upload.io/dmca" rel="nofollow">DMCA Compliant</a> • <a href="https://upload.io/dpa" rel="nofollow">GDPR Compliant</a> • <a href="https://upload.io/sla" rel="nofollow">99.9% Uptime SLA</a>
+  <br/>
+  <b>Supports:</b> Rate Limiting, Volume Limiting, File Size &amp; Type Limiting, JWT Auth, and more...
+  <br />
+</p>
 
-```typescript
-import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { UploaderModule } from "angular-uploader";
-
-import { AppComponent } from "./app.component";
-
-@NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule, 
-    UploaderModule // <-- Add the Uploader module here.
-  ],
-  bootstrap: [AppComponent]
-})
-export class AppModule {}
-```
-
-**app.component.ts**
-
-```typescript
-import { Component } from "@angular/core";
-import { Uploader, UploadWidgetConfig, UploadWidgetResult } from "uploader";
-
-@Component({
-  selector: "app-root",
-  template: `
-    <button uploadButton 
-            [uploadComplete]="onComplete" 
-            [uploadOptions]="options" 
-            [uploader]="uploader">
-      Upload a file...
-    </button>
-  `
-})
-export class AppComponent {
-  uploader = new Uploader({ 
-    apiKey: "free" // <-- Get production-ready API keys from Upload.io
-  });
-  options: UploadWidgetConfig = {
-    multi: false
-  };
-  onComplete = (files: UploadWidgetResult[]) => {
-    alert(files.map(x => x.fileUrl).join("\n"));
-  };
-}
-```
+<hr/>
+<br />
+<br />
 
 # Installation
 
@@ -277,9 +233,11 @@ Upload.io benefits developers with:
 - Powerful Rules Engine (Rate Limiting, Traffic Limiting, IP Blacklisting, Expiring Links, etc)
 - File Transformations (Image Resizing, Cropping, Optimization, etc)
 
-### 🔧 Can I bring my own file storage?
+## 🔧 Can I bring my own file storage?
 
-Uploader's USP is to provide the fastest way to integrate end-to-end file uploads into a web app, while remaining customizable. As such, Uploader will always be closely integrated with the Upload.io platform, and there are currently no plans to support custom backends. You may, however, sync files from your Upload.io account to a custom storage target.
+**Yes!** [Upload.io](https://upload.io) supports custom S3 buckets.
+
+You still need [an Upload.io account](https://upload.io) to use the widget.
 
 ## Contribute
 
