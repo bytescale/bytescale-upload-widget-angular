@@ -53,7 +53,7 @@
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0",
     "tslib": "^2.3.0",
-    "uploader": "^3.2.0"
+    "uploader": "^3.3.0"
   },
   "dependencies": {}
 }
