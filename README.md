@@ -223,33 +223,29 @@ The callbacks receive a `Array<UploadWidgetResult>`:
 
 ## Full Documentation
 
-Angular Uploader is a wrapper for Uploader — see the **[Uploader Docs](https://github.com/upload-io/uploader#%EF%B8%8F-configuration)** 📖
+[Angular Uploader Documentation »](https://upload.io/docs/upload-widget/frameworks/angular)
 
-## Where are my files stored?
+## Need a Headless (no UI) File Upload Library?
 
-Uploader uses [Upload.io](https://upload.io) as a file storage & file hosting backend.
+[Upload.js »](https://upload.io/upload-js)
 
-Upload.io benefits developers with:
+Upload.js is the lightweight JS file upload library that powers Angular Uploader — if you'd prefer to build your own UI, we recommended using Upload.js!
 
-- Zero Setup (Start uploading in the next few minutes!)
-- Pre-Integrated Storage (All you need is an Upload API key)
-- Fast File Hosting (Worldwide CDN, 300 Nodes)
-- Powerful Rules Engine (Rate Limiting, Traffic Limiting, IP Blacklisting, Expiring Links, etc)
-- File Transformations (Image Resizing, Cropping, Optimization, etc)
+## 👋 Create your Upload.io Account
 
-## 🔧 Can I bring my own file storage?
+Angular Uploader is a file upload component for [Upload.io](https://upload.io/): the file upload service for web apps.
 
-**Yes!** [Upload.io](https://upload.io) supports custom S3 buckets.
+**[Create an Upload.io account »](https://upload.io/upload-js/get-started)**
 
-You still need [an Upload.io account](https://upload.io) to use the widget.
+## Can I use my own storage?
 
-## Contribute
+**Yes!** [Upload.io](https://upload.io) supports custom S3 buckets on [Upload Plus](https://upload.io/pricing) plans.
 
-If you would like to contribute to Uploader:
+For ease and simplicity, your files are stored in Upload.io's internal S3 buckets by default. You can change this on a folder-by-folder basis — to use your existing S3 bucket(s) — in the Upload Dashboard.
 
-1. Add a [GitHub Star](https://github.com/upload-io/angular-uploader/stargazers) to the project (if you're feeling generous!).
-2. Determine whether you're raising a bug, feature request or question.
-3. Raise your issue or PR.
+## Building From Source
+
+[BUILD.md](BUILD.md)
 
 ## License
 
