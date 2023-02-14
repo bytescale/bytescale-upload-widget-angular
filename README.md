@@ -221,15 +221,66 @@ The callbacks receive a `Array<UploadWidgetResult>`:
 }
 ```
 
+# Image Processing (Resize, Crop, etc.)
+
+The [Upload.io](https://upload.io/) platform includes a built-in [Image Processing API](https://upload.io/docs/image-processing-api), which supports the following:
+
+- [Automatic Image Cropping](https://upload.io/docs/image-processing-api#crop)
+- [Manual Image Cropping](https://upload.io/docs/image-processing-api#crop-x)
+- [Image Resizing](https://upload.io/docs/image-processing-api#fit)
+- [Text Layering (e.g for text watermarks)](https://upload.io/docs/image-processing-api#text)
+- [Image Layering (e.g. for image watermarks)](https://upload.io/docs/image-processing-api#image)
+- [Adjustments (blur, sharpen, brightness, etc.)](https://upload.io/docs/image-processing-api#blur)
+- and more...
+
+### Original Image
+
+Here's an example using [a photo of Chicago](https://upcdn.io/W142hJk/raw/example/city-landscape.jpg):
+
+<img src="https://upcdn.io/W142hJk/raw/example/city-landscape.jpg" />
+
+```
+https://upcdn.io/W142hJk/raw/example/city-landscape.jpg
+```
+
+### Processed Image
+
+You can use the [Image Processing API](https://upload.io/docs/image-processing-api) to convert the above photo into [this processed image](https://upcdn.io/W142hJk/image/example/city-landscape.jpg?w=900&h=600&fit=crop&f=webp&q=80&blur=4&text=WATERMARK&layer-opacity=80&blend=overlay&layer-rotate=315&font-size=100&padding=10&font-weight=900&color=ffffff&repeat=true&text=Chicago&gravity=bottom&padding-x=50&padding-bottom=20&font=/example/fonts/Lobster.ttf&color=ffe400):
+
+<img src="https://upcdn.io/W142hJk/image/example/city-landscape.jpg?w=900&h=600&fit=crop&f=webp&q=80&blur=4&text=WATERMARK&layer-opacity=80&blend=overlay&layer-rotate=315&font-size=100&padding=10&font-weight=900&color=ffffff&repeat=true&text=Chicago&gravity=bottom&padding-x=50&padding-bottom=20&font=/example/fonts/Lobster.ttf&color=ffe400" />
+
+```
+https://upcdn.io/W142hJk/image/example/city-landscape.jpg
+  ?w=900
+  &h=600
+  &fit=crop
+  &f=webp
+  &q=80
+  &blur=4
+  &text=WATERMARK
+  &layer-opacity=80
+  &blend=overlay
+  &layer-rotate=315
+  &font-size=100
+  &padding=10
+  &font-weight=900
+  &color=ffffff
+  &repeat=true
+  &text=Chicago
+  &gravity=bottom
+  &padding-x=50
+  &padding-bottom=20
+  &font=/example/fonts/Lobster.ttf
+  &color=ffe400
+```
+
 ## Full Documentation
 
 [Angular Uploader Documentation »](https://upload.io/docs/upload-widget/frameworks/angular)
 
-## 👋 Create your Upload.io Account
+## Need a Headless (no UI) File Upload Library?
 
-Angular Uploader is the Angular file upload component for [Upload.io](https://upload.io/): the file upload service for web apps.
-
-**[Create an Upload.io account »](https://upload.io/upload-js/get-started)**
+[Try Upload.js »](https://upload.io/upload-js)
 
 ## Can I use my own storage?
 
@@ -237,9 +288,11 @@ Angular Uploader is the Angular file upload component for [Upload.io](https://up
 
 For ease and simplicity, your files are stored in Upload.io's internal S3 buckets by default. You can change this on a folder-by-folder basis — to use your existing S3 bucket(s) — in the Upload Dashboard.
 
-## Need a Headless (no UI) File Upload Library?
+## 👋 Create your Upload.io Account
 
-[Try Upload.js »](https://upload.io/upload-js)
+Angular Uploader is the Angular file upload component for [Upload.io](https://upload.io/): the file upload service for web apps.
+
+**[Create an Upload.io account »](https://upload.io/upload-js/get-started)**
 
 ## Building From Source
 
