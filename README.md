@@ -225,15 +225,9 @@ The callbacks receive a `Array<UploadWidgetResult>`:
 
 [Angular Uploader Documentation »](https://upload.io/docs/upload-widget/frameworks/angular)
 
-## Need a Headless (no UI) File Upload Library?
-
-[Upload.js »](https://upload.io/upload-js)
-
-Upload.js is the lightweight JS file upload library that powers Angular Uploader — if you'd prefer to build your own UI, we recommended using Upload.js!
-
 ## 👋 Create your Upload.io Account
 
-Angular Uploader is a file upload component for [Upload.io](https://upload.io/): the file upload service for web apps.
+Angular Uploader is the Angular file upload component for [Upload.io](https://upload.io/): the file upload service for web apps.
 
 **[Create an Upload.io account »](https://upload.io/upload-js/get-started)**
 
@@ -242,6 +236,10 @@ Angular Uploader is a file upload component for [Upload.io](https://upload.io/):
 **Yes!** [Upload.io](https://upload.io) supports custom S3 buckets on [Upload Plus](https://upload.io/pricing) plans.
 
 For ease and simplicity, your files are stored in Upload.io's internal S3 buckets by default. You can change this on a folder-by-folder basis — to use your existing S3 bucket(s) — in the Upload Dashboard.
+
+## Need a Headless (no UI) File Upload Library?
+
+[Try Upload.js »](https://upload.io/upload-js)
 
 ## Building From Source
 
