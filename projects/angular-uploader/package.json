@@ -50,8 +50,8 @@
     "publish:createGitHubRelease": "gh release create v$(node -p \"require('./package.json').version\")"
   },
   "peerDependencies": {
-    "@angular/common": "^13.3.0",
-    "@angular/core": "^13.3.0",
+    "@angular/common": ">=13",
+    "@angular/core": ">=13",
     "tslib": "^2.3.0",
     "uploader": "^3.3.0"
   },
