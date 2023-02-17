@@ -317,7 +317,7 @@ You can change this to AWS S3 on a folder-by-folder basis in the Upload Dashboar
 
 ## 👋 Create your Upload.io Account
 
-React Uploader is the React file upload component for Upload.io — The File Upload Service for Web Apps:
+Angular Uploader is the Angular file upload component for Upload.io — The File Upload Service for Web Apps:
 
 **[Create an Upload.io account »](https://upload.io/upload-js/get-started)**
 
