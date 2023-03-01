@@ -1,6 +1,6 @@
 {
   "name": "angular-uploader",
-  "version": "8.10.1",
+  "version": "8.11.0",
   "author": "Upload <hello@upload.io> (https://upload.io)",
   "description": "Angular File Upload UI Widget — Lightweight & supports: drag and drop, multiple uploads, image cropping, customization & more 🚀 Comes with Cloud Storage 🌐",
   "license": "MIT",
@@ -53,7 +53,7 @@
     "@angular/common": ">=13",
     "@angular/core": ">=13",
     "tslib": "^2.3.0",
-    "uploader": "^3.6.0"
+    "uploader": "^3.7.0"
   },
   "dependencies": {}
 }
