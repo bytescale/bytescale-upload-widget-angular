@@ -34,7 +34,7 @@
     "@angular/router": "~13.3.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "uploader": "^3.18.0",
+    "uploader": "^3.19.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -47,7 +47,7 @@
     "@wdio/jasmine-framework": "^7.19.3",
     "@wdio/local-runner": "^7.19.3",
     "@wdio/spec-reporter": "^7.19.1",
-    "chromedriver": "^111.0.0",
+    "chromedriver": "^112.0.0",
     "husky": "^7.0.4",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
