@@ -53,6 +53,6 @@
     "@angular/common": ">=13",
     "@angular/core": ">=13",
     "tslib": "^2.3.0",
-    "uploader": "^3.20.0"
+    "uploader": "^3.21.0"
   }
 }
