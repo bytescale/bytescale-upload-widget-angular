@@ -34,7 +34,7 @@
     "@angular/router": "~13.3.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "uploader": "^3.24.0",
+    "uploader": "^3.25.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
