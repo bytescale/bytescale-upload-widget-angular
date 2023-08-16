@@ -24,7 +24,7 @@ This repository comprises 2 projects:
 ### 1. Clone
 
 ```shell
-git clone git@github.com:upload-io/angular-uploader.git
+git clone git@github.com:bytescale/angular-uploader.git
 cd angular-uploader
 ```
 
