@@ -50,7 +50,7 @@
 <hr/>
 
 <p align="center">
-  <b>Supports:</b> Image Cropping, Video Previews, Document Previews, Drag & Drop, Multiple Files & More...
+  <b>Supports:</b> Image Cropping, Video Previews, Document Previews, Drag & Drop, and more...
   <br />
   <br />
   <a href="https://www.bytescale.com/docs/upload-widget/angular" rel="nofollow"><b>Full Documentation</b></a> • <a href="https://www.bytescale.com/docs/sdks/javascript" rel="nofollow">Headless SDK</a> • <a href="https://www.bytescale.com/docs/media-processing-apis" rel="nofollow">Media Processing APIs</a> • <a href="https://www.bytescale.com/docs/storage/sources" rel="nofollow">Storage</a> • <a href="https://www.bytescale.com/docs/cdn" rel="nofollow">CDN</a>
@@ -433,7 +433,7 @@ import { UrlBuilder } from "@bytescale/sdk";
 
 #### Raw Files
 
-To get the URL for the uploaded image `/example.jpg` in its original form, use the following params:
+To get the URL for the uploaded image `/example.jpg` in its original form, use the following:
 
 ```javascript
 // Returns: "https://upcdn.io/1234abc/raw/example.jpg"
@@ -445,7 +445,7 @@ UrlBuilder.url({
 
 #### Images
 
-To resize the uploaded image `/example.jpg` to 800x600, use the following params:
+To resize the uploaded image `/example.jpg` to 800x600, use the following:
 
 ```javascript
 // Returns: "https://upcdn.io/1234abc/image/example.jpg?w=800&h=600"
@@ -466,7 +466,7 @@ UrlBuilder.url({
 
 #### Videos
 
-To transcode the uploaded video `/example.mov` to MP4/H.264 in HD, use the following params:
+To transcode the uploaded video `/example.mov` to MP4/H.264 in HD, use the following:
 
 ```javascript
 // Returns: "https://upcdn.io/1234abc/video/example.mov?f=mp4-h264&h=1080"
@@ -487,7 +487,7 @@ UrlBuilder.url({
 
 #### Audio
 
-To transcode the uploaded audio `/example.wav` to AAC in 192kbps, use the following params:
+To transcode the uploaded audio `/example.wav` to AAC in 192kbps, use the following:
 
 ```javascript
 // Returns: "https://upcdn.io/1234abc/audio/example.wav?f=aac&br=192"
@@ -508,7 +508,7 @@ UrlBuilder.url({
 
 #### Archives
 
-To extract the file `document.docx` from the uploaded ZIP file `/example.zip`, use the following params:
+To extract the file `document.docx` from the uploaded ZIP file `/example.zip`, use the following:
 
 ```javascript
 // Returns: "https://upcdn.io/1234abc/archive/example.zip?m=extract&artifact=/document.docx"
