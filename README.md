@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://www.bytescale.com/docs/upload-widget/angular">
-    <img alt="Bytescale Upload Widget for Angular" width="681" height="67" src="https://raw.githubusercontent.com/bytescale/bytescale-upload-widget-angular/main/.github/assets/bytescale-upload-widget-angular.svg">
+    <img alt="Bytescale Upload Widget for Angular" width="558" height="80" src="https://raw.githubusercontent.com/bytescale/bytescale-upload-widget-angular/main/.github/assets/bytescale-upload-widget-angular.svg">
   </a>
 </h1>
 <p align="center"><b>Beautiful File Upload Widget for Angular</b><br/> (With Built-in Cloud Storage)</p>
@@ -58,7 +58,6 @@
 
 <hr/>
 
-<br />
 <br />
 
 ## Installation
