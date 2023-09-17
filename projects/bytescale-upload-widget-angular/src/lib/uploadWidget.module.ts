@@ -7,4 +7,4 @@ import { UploadButtonDirective } from "./upload-button.directive";
   imports: [],
   exports: [UploadDropzoneComponent, UploadButtonDirective]
 })
-export class UploaderModule {}
+export class UploadWidgetModule {}

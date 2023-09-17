@@ -1,7 +1,7 @@
 /*
- * Public API Surface of angular-uploader
+ * Public API Surface of @bytescale/upload-widget-angular
  */
 
 export * from "./lib/upload-dropzone.component";
 export * from "./lib/upload-button.directive";
-export * from "./lib/uploader.module";
+export * from "./lib/uploadWidget.module";

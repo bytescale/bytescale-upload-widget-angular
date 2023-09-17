@@ -1,6 +1,6 @@
 import App from "../pageobjects/app.page";
 
-describe("angular-uploader sandbox", () => {
+describe("@bytescale/upload-widget-angular sandbox", () => {
   it("should contain a dropzone component", async () => {
     await App.open();
     const button = App.dropzoneUploadButton;

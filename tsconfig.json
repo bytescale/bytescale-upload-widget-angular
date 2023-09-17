@@ -3,7 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "angular-uploader": ["dist/angular-uploader/angular-uploader", "dist/angular-uploader"]
+      "@bytescale/upload-widget-angular": ["dist/bytescale-upload-widget-angular/bytescale-upload-widget-angular", "dist/bytescale-upload-widget-angular"]
     },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",

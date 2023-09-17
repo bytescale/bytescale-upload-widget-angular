@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require("path").join(__dirname, "../../coverage/angular-uploader"),
+      dir: require("path").join(__dirname, "../../coverage/bytescale-upload-widget-angular"),
       subdir: ".",
       reporters: [{ type: "html" }, { type: "text-summary" }]
     },

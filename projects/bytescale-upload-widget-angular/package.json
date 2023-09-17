@@ -1,17 +1,17 @@
 {
-  "name": "angular-uploader",
+  "name": "@bytescale/upload-widget-angular",
   "version": "8.41.0",
   "author": "Bytescale <hello@bytescale.com> (https://www.bytescale.com)",
   "description": "Angular File Upload UI Widget — Lightweight & supports: drag and drop, multiple uploads, image cropping, customization & more 🚀 Comes with Cloud Storage 🌐",
   "license": "MIT",
-  "homepage": "https://www.bytescale.com/docs/upload-widget/frameworks/angular",
+  "homepage": "https://www.bytescale.com/docs/upload-widget/angular",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bytescale/angular-uploader.git"
+    "url": "git+https://github.com/bytescale/bytescale-upload-widget-angular.git"
   },
   "bugs": {
-    "url": "https://github.com/bytescale/angular-uploader/issues"
+    "url": "https://github.com/bytescale/bytescale-upload-widget-angular/issues"
   },
   "files": [
     "*"
@@ -46,13 +46,13 @@
   ],
   "scripts": {
     "publish:executeIfReleaseCommit": "bash -c 'COMMIT=$(git log -1 --pretty=%B) && [ \"${COMMIT:0:8}\" != \"Release \" ] || npm run publish:execute'",
-    "publish:execute": "(cd ../.. && ./node_modules/.bin/ng build angular-uploader && cd dist/angular-uploader && cp ../../README.md README.md && cp -r ../../tests tests && npm publish) && npm run publish:createGitHubRelease",
+    "publish:execute": "(cd ../.. && ./node_modules/.bin/ng build bytescale-upload-widget-angular && cd dist/bytescale-upload-widget-angular && cp ../../README.md README.md && cp -r ../../tests tests && npm publish) && npm run publish:createGitHubRelease",
     "publish:createGitHubRelease": "gh release create v$(node -p \"require('./package.json').version\")"
   },
   "peerDependencies": {
     "@angular/common": ">=13",
     "@angular/core": ">=13",
-    "tslib": "^2.3.0",
-    "uploader": "^3.47.0"
+    "@bytescale/upload-widget": "^4.3.0",
+    "tslib": "^2.3.0"
   }
 }

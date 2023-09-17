@@ -1,5 +1,5 @@
 {
-  "name": "angular-uploader-workspace",
+  "name": "@bytescale/upload-widget-angular-workspace",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -20,7 +20,7 @@
       "bash -c \"tsc --noEmit\""
     ],
     "*.{js,jsx,ts,tsx,json,css,html,md,yaml,yml}": [
-      "prettier -c"
+      "prettier -w"
     ]
   },
   "dependencies": {
@@ -32,9 +32,9 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "@bytescale/upload-widget": "^4.3.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "uploader": "^3.47.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

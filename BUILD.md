@@ -1,6 +1,6 @@
 # Building From Source
 
-This repository contains a hot-reloading sandbox for developing the `angular-uploader` NPM package.
+This repository contains a hot-reloading sandbox for developing the `@bytescale/upload-widget-angular` NPM package.
 
 ## Prerequisites
 
@@ -16,16 +16,16 @@ This repository contains a hot-reloading sandbox for developing the `angular-upl
 
 This repository comprises 2 projects:
 
-- `/projects/angular-uploader`: contains the `angular-uploader` library itself.
-- `/projects/sandbox`: provides a hot-reloading sandbox for developing the `angular-uploader` library.
+- `/projects/bytescale-upload-widget-angular`: contains the `@bytescale/upload-widget-angular` library itself.
+- `/projects/sandbox`: provides a hot-reloading sandbox for developing the `@bytescale/upload-widget-angular` library.
 
 ## How To Build & Run
 
 ### 1. Clone
 
 ```shell
-git clone git@github.com:bytescale/angular-uploader.git
-cd angular-uploader
+git clone git@github.com:bytescale/upload-widget-angular.git
+cd upload-widget-angular
 ```
 
 ### 2. Install Dependencies
@@ -39,7 +39,7 @@ npm install
 In one terminal:
 
 ```shell
-ng build angular-uploader --watch
+ng build bytescale-upload-widget-angular --watch
 ```
 
 In another terminal:
@@ -48,6 +48,6 @@ In another terminal:
 npm start
 ```
 
-The above launches a **hot-reloading** server on `http://127.0.0.1:4200` that uses `angular-uploader` from source.
+The above launches a **hot-reloading** server on `http://127.0.0.1:4200` that uses `@bytescale/upload-widget-angular` from source.
 
 _Please ensure nothing else is running on TCP port `4200`_.
