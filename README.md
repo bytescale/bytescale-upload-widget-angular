@@ -158,7 +158,7 @@ Inputs:
 
 ```typescript
 import { Component } from "@angular/core";
-import { UploadWidgetConfig, UploadWidgetResult } from '@bytescale/upload-widget';
+import { UploadWidgetConfig, UploadWidgetResult, UploadWidgetOnUpdateEvent } from '@bytescale/upload-widget';
 
 @Component({
   selector: "app-root",
@@ -180,8 +180,8 @@ export class AppComponent {
   //   state), so by default we use 'onUpdate' instead of 'onComplete'.
   // - To create a terminal dropzone, use the 'onComplete' attribute
   //   instead and add the 'showFinishButton: true' option.
-  onUpdate = (files: UploadWidgetResult[]) => {
-    alert(files.map(x => x.fileUrl).join("\n"));
+  onUpdate = (event: UploadWidgetOnUpdateEvent) => {
+    alert(event.uploadedFiles.map(x => x.fileUrl).join("\n"));
   };
   width = "600px";
   height = "375px";
