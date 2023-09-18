@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from "@angular/core";
 import { UploadWidget, UploadWidgetConfig, UploadWidgetResult } from "@bytescale/upload-widget";
+import { UploadWidgetOnUpdateEvent } from "@bytescale/upload-widget/dist/config/UploadWidgetOnUpdateEvent";
 
 @Component({
   selector: "upload-dropzone",
@@ -14,7 +15,7 @@ import { UploadWidget, UploadWidgetConfig, UploadWidgetResult } from "@bytescale
 export class UploadDropzoneComponent implements AfterViewInit {
   @Input("options") options?: UploadWidgetConfig;
   @Input("onComplete") onComplete?: (files: UploadWidgetResult[]) => void;
-  @Input("onUpdate") onUpdate?: (files: UploadWidgetResult[]) => void;
+  @Input("onUpdate") onUpdate?: (event: UploadWidgetOnUpdateEvent) => void;
   @Input("width") width: string = "600px";
   @Input("height") height: string = "375px";
 
