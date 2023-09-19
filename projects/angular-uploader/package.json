@@ -4,14 +4,14 @@
   "author": "Bytescale <hello@bytescale.com> (https://www.bytescale.com)",
   "description": "Angular File Upload UI Widget — Lightweight & supports: drag and drop, multiple uploads, image cropping, customization & more 🚀 Comes with Cloud Storage 🌐",
   "license": "MIT",
-  "homepage": "https://www.bytescale.com/docs/upload-widget/frameworks/angular",
+  "homepage": "https://www.bytescale.com/docs/upload-widget/angular",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bytescale/angular-uploader.git"
+    "url": "git+https://github.com/bytescale/bytescale-upload-widget-angular.git"
   },
   "bugs": {
-    "url": "https://github.com/bytescale/angular-uploader/issues"
+    "url": "https://github.com/bytescale/bytescale-upload-widget-angular/issues"
   },
   "files": [
     "*"
