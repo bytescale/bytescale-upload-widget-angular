@@ -175,18 +175,22 @@ export class AppComponent {
     apiKey: 'free', // Get API keys from: www.bytescale.com
     multi: false
   };
-  // 'onUpdate' vs 'onComplete' attrs on 'upload-dropzone':
-  // - Dropzones are non-terminal by default (they don't have an end
-  //   state), so by default we use 'onUpdate' instead of 'onComplete'.
-  // - To create a terminal dropzone, use the 'onComplete' attribute
-  //   instead and add the 'showFinishButton: true' option.
-  onUpdate = (event: UploadWidgetOnUpdateEvent) => {
-    alert(event.uploadedFiles.map(x => x.fileUrl).join("\n"));
+  onUpdate = ({ uploadedFiles, pendingFiles }: UploadWidgetOnUpdateEvent) => {
+    const uploadedFileUrls = uploadedFiles.map(x => x.fileUrl).join("\n");
+    console.log(uploadedFileUrls);
   };
   width = "600px";
   height = "375px";
 }
 ```
+
+> **Special behaviour for dropzones:**
+>
+> `onComplete` only fires when `showFinishButton = true` (i.e. when the user clicks "Finish").
+>
+> `onUpdate` must be used when `showFinishButton = false`.
+>
+> Default value: `showFinishButton = false`
 
 ## Result
 
