@@ -52,7 +52,7 @@
   "peerDependencies": {
     "@angular/common": ">=13",
     "@angular/core": ">=13",
-    "@bytescale/upload-widget": "^4.18.0",
+    "@bytescale/upload-widget": "^4.19.0",
     "tslib": "^2.3.0"
   }
 }
