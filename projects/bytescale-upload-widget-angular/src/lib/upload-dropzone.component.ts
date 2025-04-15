@@ -4,6 +4,7 @@ import { UploadWidgetOnUpdateEvent } from "@bytescale/upload-widget/dist/config/
 
 @Component({
   selector: "upload-dropzone",
+  standalone: false,
   template: `
     <div
       #container

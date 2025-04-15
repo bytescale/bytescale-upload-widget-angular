@@ -3,6 +3,7 @@ import { UploadWidgetConfig, UploadWidgetOnUpdateEvent, UploadWidgetResult } fro
 
 @Component({
   selector: "app-root",
+  standalone: false,
   template: `
     <div>
       <button id="uploadButton" uploadButton [uploadComplete]="handleOnComplete" [uploadOptions]="uploadOptions">

@@ -46,13 +46,15 @@
   ],
   "scripts": {
     "publish:executeIfReleaseCommit": "bash -c 'COMMIT=$(git log -1 --pretty=%B) && [ \"${COMMIT:0:8}\" != \"Release \" ] || npm run publish:execute'",
-    "publish:execute": "(cd ../.. && ./node_modules/.bin/ng build bytescale-upload-widget-angular && cd dist/bytescale-upload-widget-angular && cp ../../README.md README.md && cp -r ../../tests tests && npm publish) && npm run publish:createGitHubRelease",
+    "publish:execute": "(cd ../.. && ./node_modules/.bin/ng build bytescale-upload-widget-angular && cd dist/bytescale-upload-widget-angular && cp ../../README.md README.md && cp -r ../../test tests && npm publish) && npm run publish:createGitHubRelease",
     "publish:createGitHubRelease": "gh release create v$(node -p \"require('./package.json').version\")"
   },
   "peerDependencies": {
     "@angular/common": ">=13",
     "@angular/core": ">=13",
-    "@bytescale/upload-widget": "^4.27.0",
+    "@bytescale/upload-widget": "^4.27.0"
+  },
+  "dependencies": {
     "tslib": "^2.3.0"
   }
 }

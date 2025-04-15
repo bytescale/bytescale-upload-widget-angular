@@ -1,10 +1,13 @@
 import { TestBed } from "@angular/core/testing";
 import { AppComponent } from "./app.component";
+import { BrowserModule } from "@angular/platform-browser";
+import { UploadWidgetModule } from "@bytescale/upload-widget-angular";
 
 describe("AppComponent", () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent]
+      declarations: [AppComponent],
+      imports: [BrowserModule, UploadWidgetModule]
     }).compileComponents();
   });
 
