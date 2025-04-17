@@ -28,6 +28,9 @@ jobs:
       - name: "Check code style"
         run: find . -type f \( -iname \*.js -o -iname \*.jsx -o -iname \*.ts -o -iname \*.tsx \) | grep -v node_modules | grep -v /dist/ | xargs ./node_modules/.bin/prettier --check
 
+      - name: "Build"
+        run: npm run build
+
       # Note: we put other steps between the 'npm start' and the test runs, just to make time for the server to spin-up.
       - name: "Tests"
         run: npm run test:unit
