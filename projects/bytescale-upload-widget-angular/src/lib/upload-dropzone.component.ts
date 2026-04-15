@@ -1,6 +1,10 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from "@angular/core";
-import { UploadWidget, UploadWidgetConfig, UploadWidgetResult } from "@bytescale/upload-widget";
-import { UploadWidgetOnUpdateEvent } from "@bytescale/upload-widget/dist/config/UploadWidgetOnUpdateEvent";
+import {
+  UploadWidget,
+  UploadWidgetConfig,
+  UploadWidgetOnUpdateEvent,
+  UploadWidgetResult
+} from "@bytescale/upload-widget";
 
 @Component({
   selector: "upload-dropzone",

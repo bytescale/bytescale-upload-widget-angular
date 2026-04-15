@@ -2,7 +2,8 @@ import { Directive, HostListener, Input, OnInit } from "@angular/core";
 import { UploadWidget, UploadWidgetConfig, UploadWidgetResult } from "@bytescale/upload-widget";
 
 @Directive({
-  selector: "[uploadButton]"
+  selector: "[uploadButton]",
+  standalone: false
 })
 export class UploadButtonDirective implements OnInit {
   @Input("uploadOptions") options?: UploadWidgetConfig;
