@@ -1,6 +1,6 @@
 {
   "name": "@bytescale/upload-widget-angular",
-  "version": "9.16.0",
+  "version": "9.17.0",
   "author": "Bytescale <hello@bytescale.com> (https://www.bytescale.com)",
   "description": "Angular File Upload UI Widget — Lightweight & supports: drag and drop, multiple uploads, image cropping, customization & more 🚀 Comes with Cloud Storage 🌐",
   "license": "MIT",
